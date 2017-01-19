@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBlogMVC", "SimpleBlogMVC\SimpleBlogMVC.csproj", "{50993CB5-9EC1-45F6-B575-D5821394870A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBlogMVC.UnitTests", "SimpleBlogMVC.UnitTests\SimpleBlogMVC.UnitTests.csproj", "{CD587EF4-DAB7-41F2-A094-3B1490E2BD51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50993CB5-9EC1-45F6-B575-D5821394870A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50993CB5-9EC1-45F6-B575-D5821394870A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50993CB5-9EC1-45F6-B575-D5821394870A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50993CB5-9EC1-45F6-B575-D5821394870A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD587EF4-DAB7-41F2-A094-3B1490E2BD51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD587EF4-DAB7-41F2-A094-3B1490E2BD51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD587EF4-DAB7-41F2-A094-3B1490E2BD51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD587EF4-DAB7-41F2-A094-3B1490E2BD51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tsablic.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SimpleBlogMVC\\SimpleBlogMVC.csproj
+		SccProjectName1 = SimpleBlogMVC
+		SccLocalPath1 = SimpleBlogMVC
+		SccProjectUniqueName2 = SimpleBlogMVC.UnitTests\\SimpleBlogMVC.UnitTests.csproj
+		SccProjectName2 = SimpleBlogMVC.UnitTests
+		SccLocalPath2 = SimpleBlogMVC.UnitTests
+	EndGlobalSection
+EndGlobal

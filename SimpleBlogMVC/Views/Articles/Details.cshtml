@@ -1,0 +1,34 @@
+﻿@model SimpleBlogMVC.Models.ArticleViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="col-xs-12">
+    <div class="row">
+        <h3>@Model.Title</h3>
+        <hr/>
+        <br />
+        <div class="col-xs-12">
+            <div class="row">
+                <small><b>Author:</b></small> @Model.Author
+                <br />
+                <small><b>Date created:</b></small> @Model.DateCreated.Value.ToString("dd.MM.yyyy.")
+            </div>
+        </div>
+        
+        <div class="col-xs-12 text-justify" style="margin-top: 10px;">
+            <div class="row">
+                @Html.Raw(System.Web.HttpUtility.HtmlDecode(@Model.Content))
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @if (User.Identity.IsAuthenticated)
+    {
+        @Html.ActionLink("Edit", "Edit", new {id = Model.Id}, new {@class = "btn btn-default"})
+        @:&nbsp;
+    }
+    @Html.ActionLink("Back to List", "Index", new { controller = "Articles" }, new { @class = "btn btn-default" })
+</p>

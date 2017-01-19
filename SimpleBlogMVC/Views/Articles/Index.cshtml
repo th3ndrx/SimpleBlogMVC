@@ -1,0 +1,62 @@
+﻿@model IEnumerable<SimpleBlogMVC.Models.ArticleViewModel>
+
+@{
+    ViewBag.Title = "Articles";
+}
+
+@using PagedList.Mvc;
+@using PagedList;
+
+<div class="col-xs-12">
+    <div class="row">
+        @Html.PagedListPager((IPagedList)ViewBag.Articles, page => Url.Action("Index", new { page }))
+
+        @if (Request.IsAuthenticated)
+        {
+            @Html.ActionLink("Create new", "Create", new { controller = "Articles" }, new { @class = "btn btn-default pull-right" })
+        }
+
+    </div>
+</div>
+
+
+
+@foreach (var article in Model)
+{
+    <div class="col-xs-12">
+        <div class="row">
+            <h4>
+                @Html.ActionLink(@article.Title, "Show", new { controller = "Articles", id = article.Id })
+            </h4>
+
+            <hr />
+
+            <p>
+                @Html.Raw(System.Web.HttpUtility.HtmlDecode(@article.ContentPreview))
+            </p>
+        </div>
+        <div class="row">
+            <strong>Author: </strong>@article.Author | <strong>Created on: </strong> @article.DateCreated.Value.ToString("dd.MM.yyyy.")
+
+            <div class="pull-right">
+                @if (Request.IsAuthenticated)
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = article.Id }, new { @class = "btn btn-default " })
+                    @:&nbsp;
+                    @Html.ActionLink("Delete", "Delete", new { id = article.Id }, new { @class = "btn btn-default" })
+                }
+                else
+                {
+                    @Html.ActionLink("Read more", "Show", "Articles", new { id = article.Id }, new { @class = "btn btn-default pull-right", })
+                }
+            </div>
+        </div>
+    </div>
+}
+
+<div class="col-xs-12">
+    <div class="row">
+        @Html.PagedListPager((IPagedList)ViewBag.Articles, page => Url.Action("Index", new { page }))
+    </div>
+</div>
+
